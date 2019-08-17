@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:background="@color/colorGray"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtMaLop"
+            android:hint="Mã "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:id="@+id/edtLop"
+            android:hint="Lớp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:background="@color/colorPrimaryDark"
+        android:text="Sửa"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+
+    <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnCancel"
+        android:text="Huỷ"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+</LinearLayout>
