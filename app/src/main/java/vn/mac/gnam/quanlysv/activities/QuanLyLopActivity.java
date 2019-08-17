@@ -99,14 +99,13 @@ public class QuanLyLopActivity extends AppCompatActivity implements LopAdapter.O
                 lop.setId(lp.getId());
                 lop.setMaLop(edtMaLop.getText() + "");
                 lop.setLop(edtLop.getText() + "");
-
-                int result = classDAO.updateLop(lop);
                 boolean checkExistLop = false;
                 checkExistLop = isClassNameExist(edtMaLop.getText().toString());
                 if(checkExistLop){
                     Toast.makeText(QuanLyLopActivity.this, "Mã lớp bị trùng, vui lòng chọn Mã lớp khác!", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    int result = classDAO.updateLop(lop);
                     if (result > 0) {
                         updateListLop();
                         Toast.makeText(getBaseContext(), "Đã cập nhật thành công!", Toast.LENGTH_SHORT).show();
@@ -153,7 +152,6 @@ public class QuanLyLopActivity extends AppCompatActivity implements LopAdapter.O
             String txtLop = lo.getMaLop();
             if (txtLop.equals(className)) return true;
         }
-
         return false;
     }
 
